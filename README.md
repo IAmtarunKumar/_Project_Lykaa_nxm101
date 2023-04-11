@@ -28,36 +28,53 @@ To make a purchase, you will need to create an account on our website. You can d
 
 <i>Easy Checkout</i> : Our checkout process is quick and easy, and we accept a variety of payment methods, including credit and debit cards, net banking, UPI, and more. <br><br>
 
+  <br><br>
+<h3>It is a indivisual project I complete the project a span of 5 day I implemnet lots of features in this website due to time issue I am not able to implement some features</h3>
+<br><br>  
 
 </h4>
-  #Home Page
+  <h1>Home Page </h1>
 <img src="./frontend/home_page.png" alt="">
-<img src="./frontend/payment_page.png" alt="">
-<img src="./frontend/login_page.png" alt="">
+  
+    <h1>Sign Up Page </h1>
 <img src="./frontend/signup_page.png" alt="">
+  
+    <h1>Login Page </h1>
+<img src="./frontend/login_page.png" alt="">
+  
+  
+    <h1>Product Page</h1>
 <img src="./frontend/product_page.png" alt="">
+  
+    <h1>Cart Page</h1>
 <img src="./frontend/cart_page.png" alt="">
+  
+  <h1>Payment Page </h1>
+<img src="./frontend/payment_page.png" alt="">
 
 
 
-CrewCollab is a collaborative messaging platform designed to help teams work together more efficiently. With CrewCollab, team members can create rooms for specific projects, departments, or interests and easily communicate in real-time. CrewCollab aims to streamline communication and increase collaboration among team members, helping teams stay connected and productive no matter where they are located.
+
+
+
 
 ## Demo
 
-[CrewCollab Web Page](https://monumental-travesseiro-66a6ea.netlify.app/login.html)
+[Lykaa](https://glistening-croissant-1be435.netlify.app/login.html)
+
 
 
 ## Authors
 
-- [Kanade Aditya](https://www.github.com/octokatherine)
-- [Ashish Pal](https://github.com/anonymous10062002)
-- [Abhinav](https://github.com/Abhinav068)
+
 - [Tarun Kumar](https://github.com/IAmtarunKumar)
 
 
 
 
 ## Backend Deployment
+
+
 
 To deploy this project run following commands on Backend folder
 
@@ -66,8 +83,9 @@ To deploy this project run following commands on Backend folder
 ```
 
 ```bash
-  npm run dev
+  npm run server
 ```
+
 
 
 ## Environment Variables
@@ -76,22 +94,10 @@ To run this project, you will need to add the following environment variables to
 
 `mongoURL`
 
-`normalKey`
-
-`refreshkey`
-
 `port`
 
-`crypterKey`
+  
 
-`redisURL`
-## Features
-
-- User Authentication [oAuth]
-- Live Chat Feature
-- Secured password through hashing
-- Message encyrption 
-- Rooms Creation and Join 
 
 
 
