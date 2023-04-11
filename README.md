@@ -33,24 +33,7 @@ To make a purchase, you will need to create an account on our website. You can d
 <br><br>  
 
 </h4>
-  <h1>Home Page </h1>
-<img src="./frontend/home_page.png" alt="">
-  
-   <h1>Sign Up Page </h1>
-<img src="./frontend/signup_page.png" alt="">
-  
-    <h1>Login Page </h1>
-<img src="./frontend/login_page.png" alt="">
-  
-  
-    <h1>Product Page</h1>
-<img src="./frontend/product_page.png" alt="">
-  
-    <h1>Cart Page</h1>
-<img src="./frontend/cart_page.png" alt="">
-  
-  <h1>Payment Page </h1>
-<img src="./frontend/payment_page.png" alt="">
+
 
 
 
@@ -97,6 +80,24 @@ To run this project, you will need to add the following environment variables to
 `port`
 
   
+    <h1>Home Page </h1>
+<img src="./frontend/home_page.png" alt="">
+  
+   <h1>Sign Up Page </h1>
+<img src="./frontend/signup_page.png" alt="">
+  
+      <h1>Login Page </h1>
+<img src="./frontend/login_page.png" alt="">
+  
+  
+       <h1>Product Page</h1>
+<img src="./frontend/product_page.png" alt="">
+  
+      <h1>Cart Page </h1>
+<img src="./frontend/cart_page.png" alt="">
+  
+  <h1>Payment Page </h1>
+<img src="./frontend/payment_page.png" alt="">
 
 
 
