@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>admin</title>
+  </head>
+  <style>
+    .main {
+      /* background-color: pink; */
+      width: 100%;
+      height: auto;
+      display: flex;
+    }
+    .main > div:nth-child(1) {
+      width: 25%;
+      height: 100%;
+      /* border: 2px solid red; */
+      background-color: rgb(242, 107, 129);
+
+      border-radius: 20px;
+    }
+
+    .main > div:nth-child(2) {
+      width: 75%;
+      height: 100%;
+      /* border: 2px solid red; */
+      border-radius: 20px;
+      background-color: white;
+    }
+    #form1 input {
+      width: 300px;
+      height: 30px;
+      margin-left: 30px;
+      border-radius: 10px;
+
+
+      border: none;
+      font-size: 20px;
+    }
+    #form1 p {
+      margin-left: 50px;
+      font-size: 20px;
+      /* padding: 10px; */
+      margin-top: -20px;
+    }
+
+    /* div 2 css  */
+    #alldata{
+        display: grid;
+        grid-template-columns:auto auto auto;
+        gap: 10px 10px;
+        margin-left: 20px;
+    }
+    #alldata>div{
+        /* border: 1px solid gray; */
+        margin: 20px;
+        width:60%;
+        /* text-align: center; */
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    }
+     #alldata>div img{
+        width: 100%;
+        border-radius: 10px;
+     }  
+    #alldata>div span{
+        font-family: sans-serif;
+        font-size: 16px;
+        /* font-weight: bold; */
+        color: black;
+        /* padding: 20px; */
+    }
+    #alldata>div button{
+        background-color:white;
+        color:  black;
+        background-color: white;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid gray;
+        border-radius: 10px;
+    }
+    #all{
+        border: none;
+        width: 80%;
+        
+        height: 50px;
+        border-radius: 10px;
+        color: black;
+        font-weight: bold;
+        margin: 30px 30px 0px 30px;
+        font-size: 30px;
+        padding: 10px;
+    }
+  </style>
+
+
+
+  <body>
+    <div>
+      <h1 style="text-align: center;background-color: rgb(245, 20, 57); color: white;padding: 10px;">Admin Page</h1>
+    </div>
+   
+
+  <div style="display: flex; justify-content:space-evenly;align-items: center; background-color: rgba(255, 192, 203, 0.605);">
+    <div >
+    <a style="text-decoration: none; font-family: cursive; color: rgb(248, 14, 53);" href="index.html"><h2>Home</h2></a>
+  </div>
+  <div>
+    <a style="text-decoration: none; font-family: cursive; color: rgb(248, 14, 53);" href="product.html"><h2>Product</h2></a>
+
+  </div>
+  <div>
+    <a style="text-decoration: none; font-family: cursive; color: rgb(248, 14, 53);" href="cartpage.html"><h2>Cart</h2></a>
+
+  </div>
+</div>
+
+   <br>
+
+    <div class="main">
+      <div>
+
+      
+<hr>
+        <Button id="all">ADD PRODUCT</Button>
+        <br><br><br>
+        
+        
+        <form id="form1" action="">
+          <input
+            type="text"
+            name=""
+            id="image"
+            placeholder="Product Image"
+          />
+          <br /><br />
+          <input id="title" type="text" placeholder="Title" /><br /><br />
+          <input id="price" type="text" placeholder="Price" /><br /><br />
+          <input id="discount" type="text" placeholder="Discount" /><br /><br />
+          <input id="category" type="text" placeholder="Category" /><br /><br />
+          <input id="rating" type="text" placeholder="Customer Rating" /><br /><br />
+          <input id="stock" type="text" placeholder="No of Stock" /><br /><br />
+          <input id="brand" type="text" placeholder="Enter Brand Name" /><br /><br />
+
+
+          <input type="submit" name="" id="" />
+          <br /><br />
+        </form>
+      </div>
+      <!-- DIV 2  -->
+
+      <div id="alldata">
+        
+
+
+      </div>
+      <!-- // -->
+    </div>
+  </body>
+</html>
+<script>
+  let form = document.querySelector("#form1");
+  console.log(form);
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    // alert("working")
+
+    let obj = {
+        image : form.image.value,
+      title: form.title.value,
+      price: form.price.value,
+      category: form.category.value,
+      discount: form.discount.value,
+      rating: form.rating.value,
+      stock: form.stock.value,
+      brand: form.brand.value,
+    };
+    console.log(obj);
+    postdata(obj);
+  });
+
+  let postdata = async (obj) => {
+    try {
+      let res = await fetch("http://localhost:8000/posts/create", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": localStorage.getItem("token"),
+        },
+        body: JSON.stringify(obj),
+      });
+      if (res) {
+        let data = await res.json();
+        alert(data.msg);
+        console.log(data)
+        console.log(data.token)
+      }
+    } catch (error) {
+      alert("Something Went Wrong");
+      console.log(error)
+    }
+  };
+
+// all product 
+
+// let all =document.querySelector("#all")
+// all.addEventListener("click",()=>{
+    
+    let alldata = async (obj) => {
+    try {
+      let res = await fetch("http://localhost:8000/posts/", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": localStorage.getItem("token"),
+        },
+        body: JSON.stringify(obj),
+      });
+      if (res) {
+        let data = await res.json();
+        // alert("data");
+        console.log(data)
+        appendData(data)
+        // console.log(data.token)
+      }
+    } catch (error) {
+      alert("Something Went Wrong");
+      console.log(error)
+    }
+  };
+  alldata()
+
+  function appendData(data) {
+    let alldata  = document.querySelector("#alldata")
+    alldata.innerHTML=""
+    data.forEach((item)=>{
+    console.log(item)
+     let alldata  = document.querySelector("#alldata")
+       
+     let div = document.createElement("div")
+    div.innerHTML=` 
+            <img src=${item.image} alt="">
+            <br>
+            <div>${item.title} </div><br>
+            <span>MRP :₹${item.price}</span>       &nbsp &nbsp &nbsp             <span>${item.discount}% Off</span>
+            <br>
+            <span>Rating : ${item.rating}</span>   &nbsp &nbsp &nbsp                 <span>(${item.stock})</span><br>
+            <button id="delete" data-id="${item._id}">Delete</button>
+            <button class="update" data-id="${item._id}">Update</button>
+
+        `
+        
+        
+        alldata.append(div)
+    })
+
+
+
+
+
+//update
+let update = document.querySelectorAll(".update")
+    // console.log(del)
+    for(let value of update){
+        value.addEventListener("click",()=>{
+            let id = value.dataset.id
+            window.location.href="adminUpdate.html"
+            // console.log(id)
+            // deleteproduct(id)
+            localStorage.setItem("updateid",JSON.stringify(id))
+        })
+    }
+
+
+// delete funcationality start 
+
+    let deletebtn = document.querySelectorAll("#delete")
+    // console.log(del)
+    for(let del of deletebtn){
+        del.addEventListener("click",()=>{
+            let id = del.dataset.id
+            console.log(id)
+            deleteproduct(id)
+        })
+    }
+
+
+
+  }
+
+
+
+
+
+    
+    let deleteproduct = async (id) => {
+    try {
+      let res = await fetch(`http://localhost:8000/posts/delete/${id}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": localStorage.getItem("token"),
+        }
+        // ,
+        // body: JSON.stringify(obj),
+      });
+      if (res) {
+        let data = await res.json();
+       
+        console.log(data)
+        // appendData(data)
+        // console.log(data.token)
+        alert("deleted");
+      }
+    } catch (error) {
+      alert("Something Went Wrong");
+      console.log(error)
+    }
+  };
+
+// delete functionality end 
+
+
+
+</script>
