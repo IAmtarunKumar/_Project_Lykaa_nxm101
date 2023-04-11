@@ -36,7 +36,7 @@ To make a purchase, you will need to create an account on our website. You can d
   <h1>Home Page </h1>
 <img src="./frontend/home_page.png" alt="">
   
-    <h1>Sign Up Page </h1>
+   <h1>Sign Up Page </h1>
 <img src="./frontend/signup_page.png" alt="">
   
     <h1>Login Page </h1>
