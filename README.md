@@ -78,7 +78,24 @@ To run this project, you will need to add the following environment variables to
 `mongoURL`
 
 `port`
-
+  <br><br>
+<h2>Tech Stack </h2>
+  <br>
+  <h3>Frontend </h3>
+  # HTML
+  <br>
+  # CSS
+  <br>
+  # JAVASCRIPT
+  <br>
+   <h3>Backend</h3>
+  <br>
+  # NODE.JS
+  <br>
+  # MONGODB
+  <br>
+  # MONGO ATLAS
+<br><br>
   
     <h1>Home Page </h1>
 <img src="./frontend/home_page.png" alt="">
