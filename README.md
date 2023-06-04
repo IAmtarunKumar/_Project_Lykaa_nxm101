@@ -43,7 +43,7 @@ To make a purchase, you will need to create an account on our website. You can d
 
 ## Demo
 
-[Lykaa](https://glistening-croissant-1be435.netlify.app/login.html)
+[Lykaa](https://glistening-croissant-1be435.netlify.app)
 
 
 
