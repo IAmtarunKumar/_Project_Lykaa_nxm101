@@ -32,7 +32,7 @@ setInterval(five,10000)
 
 
 //SHOW DATA START
-
+let priceArr = []
 let show_product = async () => {
   // let a =JSON.parse(localStorage.getItem("updateid"))
 // console.log(typeof a)
@@ -69,25 +69,42 @@ function appendData(data) {
 let alldata  = document.querySelector("#alldata")
 alldata.innerHTML=""
 data.forEach((item)=>{
-console.log(item)
+// console.log(item)
+priceArr.push(item.price)
+
+
 let alldata  = document.querySelector("#alldata")
- 
 let div = document.createElement("div")
 div.innerHTML=` 
       <img src=${item.image} alt="">
-      <br>
+     
       <div>${item.title} </div><br>
       <span>MRP :₹${item.price}</span>       &nbsp &nbsp &nbsp             <span>${item.discount}% Off</span>
-      <br>
-      <span>Rating : ${item.rating}</span>   &nbsp &nbsp &nbsp                 <span>(${item.stock})</span><br> <br>
+     
+      <span>Rating : ${item.rating}</span>   &nbsp &nbsp &nbsp                 <span>(${item.stock})</span><br> 
       
       <button class="buy" data-id="${item._id}">Buy</button>
-        <button class="delete" data-id="${item._id}">delete</button>
+        <button class="delete" data-id="${item._id}">Delete</button>
   `
   
   
   alldata.append(div)
 })
+
+//priceArr
+
+console.log(priceArr)
+let totalCart = document.querySelector(".totalCart")
+totalCart.innerHTML = `${priceArr.length} Items`
+
+let totalPriceSum = 0
+for(let el of priceArr){
+  totalPriceSum+=el
+}
+
+let totalPrice = document.querySelector(".totalPrice")
+totalPrice.innerHTML=`${totalPriceSum} ₹`
+
 
 
 //delete id select

@@ -256,21 +256,23 @@ body{
 
 #alldata{
     display: grid;
-    grid-template-columns:auto auto auto;
-    /* gap: 5px 5px; */
-    margin-left: 10%;
+    grid-template-columns:repeat(6,1fr);
+    gap: 10px;
+    margin-left: 5%;
 }
 #alldata>div{
     border: 1px solid gray;
-    margin: 20px;
-    width:60%;
+    /* margin: 10px; */
+    /* width:60%; */
+    width: 250px;
+    height: 380px;
     /* text-align: center; */
-    padding: 10px;
+    padding: 0px 10px;
     border-radius: 10px;
     font-size: 20px;
 }
  #alldata>div img{
-    width: 100%;
+    max-width: 100%;
     border-radius: 10px;
  }  
 #alldata>div span{
@@ -286,10 +288,16 @@ body{
     background-color: white;
     font-size: 20px;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 5px;
     padding: 10px;
     border: 1px solid gray;
     border-radius: 10px;
+}
+
+#alldata>div>div{
+    font-size: 16px;
+    font-weight: bold;
+    
 }
 
 #alldata a{
@@ -306,12 +314,19 @@ body{
     background-color:white;
     color:  black;
     background-color: white;
-    font-size: 20px;
+    font-size: 15px;
     text-align: center;
-    margin-top: 10px;
-    padding: 10px;
+    margin-top: 5px;
+    margin-left: 20px;
+    padding: 5px 30px;
     border: 1px solid gray;
-    border-radius: 10px;
+    border-radius: 5px;
+}
+
+#alldata>div button:hover{
+    background: rgb(255, 22, 162);
+    color: white;
+    border: none;
 }
 /* cart show css end  */
 /* footer section  */
