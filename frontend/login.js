@@ -30,7 +30,7 @@ let postdata = async (obj)=>{
             let data = await res.json()
             alert(data.msg)
             localStorage.setItem("token" , data.token)
-            localStorage.setItem("name", data.name)
+            localStorage.setItem("username", data.name)
 
             if(data.msg === "login successful"){
             setTimeout(() => {

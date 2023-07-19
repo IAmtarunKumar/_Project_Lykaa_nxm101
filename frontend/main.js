@@ -41,6 +41,12 @@ sign.addEventListener("click",()=>{
 	window.location.href="login.html"
 })
 
+//
+let username  = localStorage.getItem("username")
+if(username){
+	sign.innerHTML =`&nbsp; &nbsp; User : ${username}&nbsp; &nbsp;    `
+}
+
 // product slider
 
 let span = document.getElementsByTagName('span');
