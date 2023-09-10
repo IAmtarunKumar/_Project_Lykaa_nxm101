@@ -187,7 +187,7 @@
 
   let postdata = async (obj) => {
     try {
-      let res = await fetch("http://localhost:8000/posts/create", {
+      let res = await fetch("https://red-tasty-turtle.cyclic.app/posts/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -214,7 +214,7 @@
     
     let alldata = async (obj) => {
     try {
-      let res = await fetch("http://localhost:8000/posts/", {
+      let res = await fetch("https://red-tasty-turtle.cyclic.app/posts/", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -301,7 +301,7 @@ let update = document.querySelectorAll(".update")
     
     let deleteproduct = async (id) => {
     try {
-      let res = await fetch(`http://localhost:8000/posts/delete/${id}`, {
+      let res = await fetch(`https://red-tasty-turtle.cyclic.app/posts/delete/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
